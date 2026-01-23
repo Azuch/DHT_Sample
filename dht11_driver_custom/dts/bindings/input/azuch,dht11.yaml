@@ -1,0 +1,20 @@
+description: Azuch custom's DHT11 temperature, humidity sensor
+
+compatible: "azuch,dht11"
+
+include: sensor-device.yaml
+
+properties:
+  dio-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      Pin on which sensor communication will be performed.
+
+      Control and data are encoded by the duration of active low signals. A pull up may be appropriate.
+
+  dht22:
+    type: boolean
+    description: |
+      Set to identify as a DHT22/AM2303. Leave unset to identity sensor as DHT11.
+

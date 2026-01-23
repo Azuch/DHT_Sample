@@ -1,0 +1,12 @@
+/ {
+        aliases {
+                dht11 = &dht11_0;
+        };
+
+        dht11_0: dht11 {
+                compatible = "azuch,dht11";
+                status = "okay";
+                dio-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // GPIO5
+        };
+};
+

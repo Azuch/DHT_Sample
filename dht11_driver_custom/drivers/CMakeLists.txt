@@ -1,0 +1,1 @@
+add_subdirectory_ifdef(CONFIG_AZUCH_DHT11 dht11)
